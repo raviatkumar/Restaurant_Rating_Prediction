@@ -64,14 +64,7 @@ The project consists of the following pages and features:
    git clone https://github.com/yourusername/restaurant-rating-prediction.git
    cd restaurant-rating-prediction
    ```
-
-2. **Install dependencies**:
-   Install the required packages from `requirements.txt`.
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the Flask App**:
+2. **Run the Flask App**:
    ```bash
    python app.py
    ```
