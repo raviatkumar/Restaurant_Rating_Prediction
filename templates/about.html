@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Restaurant Rating Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            font-size: 18px; /* Increased base font size */
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 20px; /* Increased font size for navigation links */
+        }
+        nav a:hover {
+            color: #ff5722;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 36px; /* Increased font size for main title */
+        }
+        h2 {
+            color: #ff5722;
+            margin-bottom: 10px;
+            font-size: 28px; /* Increased font size for subtitles */
+        }
+        h3 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        p, ul li {
+            line-height: 1.8;
+            color: #555;
+            font-size: 20px; /* Increased font size for paragraphs and list items */
+        }
+        ul {
+            margin-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 18px; /* Increased font size for footer */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a> | 
+        <a href="{{ url_for('show_predictor') }}">Predict</a> | 
+        <a href="{{ url_for('about') }}">About</a>
+    </nav>
+
+    <div class="container">
+        <h1><u>Restaurant Rating Prediction Model</u></h1>
+
+        <h2><u>Project Overview:</u></h2>
+        <p>
+            This project is designed to predict restaurant ratings based on various factors like online orders, 
+            type of service (dine-in or delivery), location, cuisine, and cost for two people. Using data from Zomato, 
+            we performed extensive Exploratory Data Analysis (EDA) to uncover patterns and trends in customer 
+            preferences. The insights gained from the analysis were used to build a machine learning model capable 
+            of predicting restaurant ratings.
+        </p>
+
+        <p>
+            To achieve this, we implemented various machine learning algorithms such as Linear Regression, Decision Tree, 
+            Random Forest Regressor, Gradient Boosting Regressor, and XGBoost. After testing different models, XGBoost 
+            with Cross-Validation was found to be the most effective and was chosen for deployment.
+        </p>
+
+        <p>
+            This model can help restaurants listed on Zomato to better understand the key factors that influence their 
+            ratings and make informed decisions to improve customer satisfaction and service quality.
+        </p>
+
+        <!-- Key Features Section -->
+        <h2><u>Key Features of the Project:</u></h2>
+        <ul>
+            <li>Data Analysis: Insights into online vs. offline orders, preferred service types, popular locations, common cuisines, and cost patterns for dining.</li>
+            <li>Machine Learning Models: Multiple models were evaluated, with XGBoost (with cross-validation) selected as the best-performing model.</li>
+            <li>Deployment: The model was successfully deployed using Flask to make real-time predictions of restaurant ratings.</li>
+        </ul>
+
+        <!-- Technologies Used Section -->
+        <h2><u>Technologies Used:</u></h2>
+        <ul>
+            <li>Programming Language: Python</li>
+            <li>Libraries: Pandas, Numpy, Scikit-Learn, XGBoost, Flask</li>
+            <li>Model Deployment: Flask for creating a web interface</li>
+            <li>Storage: Pickle for saving the trained model and label encoders</li>
+        </ul>
+
+        <!-- Developer Info -->
+        <h2><u>Project Developed By:</u></h2>
+        
+        <h3>Ravi Kumar M</h3>
+        
+    </div>
+</body>
+</html>

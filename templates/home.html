@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Rating Prediction - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            font-size: 18px; /* Increased base font size */
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 20px; /* Increased font size for navigation links */
+        }
+        nav a:hover {
+            color: #ff5722;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 36px; /* Increased font size for main title */
+        }
+        h2 {
+            color: #ff5722;
+            margin-bottom: 10px;
+            font-size: 28px; /* Increased font size for subtitles */
+        }
+        p {
+            line-height: 1.8; /* Slightly increased line height */
+            color: #555;
+            font-size: 20px; /* Increased font size for paragraphs */
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 18px; /* Increased font size for footer */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a> | 
+        <a href="{{ url_for('login') }}">Login</a> |
+        <a href="{{ url_for('show_predictor') }}">Predict</a> | 
+        <a href="{{ url_for('about') }}">About</a>
+    </nav>
+
+    <div class="container">
+        <h1><u>Restaurant Rating Prediction</u></h1>
+        <p>
+            Welcome to the Restaurant Rating Prediction tool! This machine learning model helps predict ratings 
+            for restaurants based on key factors such as online orders, delivery options, location, cuisine, and 
+            cost for two people.
+        </p>
+
+        <!-- Project Overview -->
+        <h2>Project Name: Restaurant Rating Prediction</h2>
+        <p>
+            The Restaurant Rating Prediction Model is a machine learning tool designed to predict ratings for restaurants based on key factors such as the type of orders (online vs. offline), delivery options, location, cuisine, and pricing for two people. This project aims to assist restaurant managers in improving their services by leveraging predictive analytics.
+        </p>
+        <p>
+            By analyzing the dataset, this model provides valuable insights into what drives customer satisfaction and how ratings are impacted by various attributes of the restaurant. The model is built using advanced machine learning algorithms, with XGBoost and Cross-Validation being the best-performing model for accurate rating predictions.
+        </p>
+
+        <!-- Image Section -->
+        <img src="{{ url_for('static', filename='css/Image/food.jpg') }}" alt="Restaurant Image" style="width:100%;max-width:600px;">
+        
+        <!-- Content Overview -->
+        <h2>Content:</h2>
+        <p>
+            On this website, you can predict a restaurant's rating based on different factors. You can use the "Predict" page to input details such as order type, location, cuisine, and cost, and get instant predictions of your restaurant's rating. For more detailed information on how this model was created, visit the "About" page.
+        </p>
+    </div>
+
+    <footer>
+        © 2024 Restaurant Rating Prediction
+    </footer>
+</body>
+</html>

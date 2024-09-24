@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Rating Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Inline styles for extra alignment control */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 36px;
+        }
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-size: 20px;
+            color: #333;
+        }
+        select, input[type="number"] {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="submit"] {
+            background-color: #ff5722;
+            color: #fff;
+            font-size: 18px;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #e64a19;
+        }
+        .prediction-result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 22px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a> | 
+        <a href="{{ url_for('show_predictor') }}">Predict</a> | 
+        <a href="{{ url_for('about') }}">About</a>
+    </nav>
+
+    <div class="container">
+        <h1>Restaurant Rating Predictor</h1>
+        <form method="POST" action="/predict">
+            <label for="online_order">Online Order:</label>
+            <select id="online_order" name="online_order" required>
+                {% for option in online_order_values %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="book_table">Book Table:</label>
+            <select id="book_table" name="book_table" required>
+                {% for option in book_table_values %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="votes">Votes:</label>
+            <input type="number" id="votes" name="votes" required>
+
+            <label for="location">Location:</label>
+            <select id="location" name="location" required>
+                {% for option in location_values %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="rest_type">Restaurant Type:</label>
+            <select id="rest_type" name="rest_type" required>
+                {% for option in rest_type_values %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="cuisines">Cuisines:</label>
+            <select id="cuisines" name="cuisines" required>
+                {% for option in cuisines_values %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="cost_for_two_people">Cost for Two People:</label>
+            <select name="cost_for_two_people" required>
+                {% for option in approx_cost_values %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="type">Type:</label>
+            <select name="type" required>
+                {% for option in type_values %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction %}
+        <div class="prediction-result">
+            <h2>Prediction: {{ prediction }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

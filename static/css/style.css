@@ -1,0 +1,104 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Styling */
+nav {
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Heading and Paragraph Styling */
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+/* Form Styling for Predict Page */
+form {
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+form label, form select, form input {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    margin-top: 20px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* Footer and Navigation Links Styling */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}

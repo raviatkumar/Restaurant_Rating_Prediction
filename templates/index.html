@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select, input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurant Prediction Form</h1>
+    <form action="/predict" method="POST">
+        <label for="online_order">Online Order:</label>
+        <select name="online_order">
+            {% for option in online_order_values %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="book_table">Book Table:</label>
+        <select name="book_table">
+            {% for option in book_table_values %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="votes">Votes:</label>
+        <input type="number" id="votes" name="votes" required>
+
+        <label for="location">Location:</label>
+        <select name="location">
+            {% for option in location_values %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="rest_type">Restaurant Type:</label>
+        <select name="rest_type">
+            {% for option in rest_type_values %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="cuisines">Cuisines:</label>
+        <select name="cuisines">
+            {% for option in cuisines_values %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="cost_for_two_people">Cost for Two People:</label>
+        <select name="cost_for_two_people">
+            {% for option in approx_cost_values %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="type">Type:</label>
+        <select name="type">
+            {% for option in type_values %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>                        
+</html>
