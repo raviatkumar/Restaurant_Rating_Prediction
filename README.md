@@ -108,10 +108,4 @@ This project is licensed under the **MIT License**.
 
 ---
 
-## **Languages**
-
-- **Python**: 100%
-
----
-
 This README provides a comprehensive overview of the project, how to run it, and plans for future improvements like Dockerization and cloud deployment. Feel free to customize it further to reflect any additional features or updates you make.
