@@ -4,6 +4,10 @@
 
 This project focuses on predicting restaurant ratings using features from the Zomato dataset. The workflow involved several key machine learning processes, including Data Exploration, Data Cleaning, Feature Engineering, and Model Building. The insights gathered from thorough Exploratory Data Analysis (EDA) were instrumental in building a robust predictive model.
 
+### Video 
+
+https://github.com/user-attachments/assets/dfaf0060-cfea-4652-92ab-f342fad21b0a
+
 ### **Key Insights from EDA**:
 - **Online vs. Offline Orders**: Around 30,000 orders were online, while about 23,000 were offline, indicating the popularity of online orders.
 - **Preferred Service Type**: Delivery was the most preferred service (50.2%), followed by Dine-out (34.4%).
@@ -43,14 +47,25 @@ The project consists of the following pages and features:
 - Allows users to log in before using the rating prediction tool.
 - Simple form validation was implemented.
 
+![Alt text](https://github.com/raviatkumar/Restaurant_Rating_Prediction/blob/main/output/image3.PNG?raw=true)
+
 ### **2. Home Page**
 - Displays the main features of the restaurant rating prediction system.
 - Users can navigate to the prediction form from here.
+
+![Alt text](https://raw.githubusercontent.com/raviatkumar/Restaurant_Rating_Prediction/refs/heads/main/output/image1.PNG)
 
 ### **3. Prediction Page**
 - Users input various restaurant attributes (e.g., location, online order, cuisine) into the form.
 - The Flask backend sends these inputs to the machine learning model, and the predicted rating is displayed.
 
+![Alt text](https://raw.githubusercontent.com/raviatkumar/Restaurant_Rating_Prediction/refs/heads/main/output/image4.PNG)
+
+### **4. About Page**
+- Page about the project which tells what technology used and how model is implemented.
+
+![Alt text](https://raw.githubusercontent.com/raviatkumar/Restaurant_Rating_Prediction/refs/heads/main/output/image2.PNG)
+ 
 ### **Deployment**:
 - The app is deployed locally on **Flask** and can be accessed via `localhost:5000`.
 - Future deployment options include Dockerizing the application and hosting it on cloud platforms like **AWS** or **Heroku** for a live website experience.
