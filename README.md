@@ -6,7 +6,7 @@ This project focuses on predicting restaurant ratings using features from the Zo
 
 ### PPT 
 
-https://drive.google.com/file/d/1LlIt8SfGdP30uekixfxPh-6oJ7_JqgK-/view?usp=sharing
+https://github.com/user-attachments/assets/b423f95e-b835-489d-b559-d5143152130b
 
 ### Video 
 
