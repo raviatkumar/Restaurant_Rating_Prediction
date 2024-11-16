@@ -4,6 +4,10 @@
 
 This project focuses on predicting restaurant ratings using features from the Zomato dataset. The workflow involved several key machine learning processes, including Data Exploration, Data Cleaning, Feature Engineering, and Model Building. The insights gathered from thorough Exploratory Data Analysis (EDA) were instrumental in building a robust predictive model.
 
+### Model Explanation 
+
+https://drive.google.com/file/d/1imrTA0uO-rJn4s-tqYGZj3RqAiD9sMtv/view?usp=sharing
+
 ### PPT 
 
 https://github.com/user-attachments/assets/b423f95e-b835-489d-b559-d5143152130b
